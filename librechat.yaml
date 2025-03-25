@@ -1,0 +1,138 @@
+version: 1.1.4
+
+cache: true
+
+endpoints:
+  custom:
+    - name: QanDu
+      apiKey: none
+      baseURL: https://text.pollinations.ai/v1
+      endpointType: custom
+      models:
+        default: [
+          "openai-large",
+          "openai",
+          "openai-reasoning",
+          "searchgpt",
+          "mistral",
+          "claude-hybridspace",
+          "deepseek-r1",
+          "deepseek-r1-llama",
+          "llama",
+          "llamalight",
+          "gemini",
+          "qwen-coder",
+          "phi",
+          "openai-vision",
+          "gemini-pro-vision",
+          "gpt-4-vision-latest",
+          "cl100k-vision",
+          "llama-4",
+          "mixtral",
+          "solar",
+          "deepseek-math",
+          "deepseek-code",
+          "qwen-turbo",
+          "claude-3-sonnet",
+          "claude-3-opus",
+          "claude-3-haiku",
+          "gpt-4-turbo-preview"
+        ]
+      modelDisplayNames:
+        openai-large: "GPT-4o"
+        openai: "GPT-4o-mini"
+        openai-reasoning: "o3-mini"
+        searchgpt: "SearchGPT (requires web search)"
+        mistral: "Mistral"
+        claude-hybridspace: "Claude Vision"
+        deepseek-r1: "DeepSeek R1-Qwen"
+        deepseek-r1-llama: "DeepSeek R1-Llama"
+        llama: "Llama 3.3"
+        llamalight: "Llama 3.1"
+        gemini: "Gemini 2.0"
+        qwen-coder: "Qwen 2.5 Coder"
+        phi: "Phi-4"
+        openai-vision: "GPT-4o Vision"
+        gemini-pro-vision: "Gemini Pro Vision"
+        gpt-4-vision-latest: "GPT-4 Vision Latest"
+        cl100k-vision: "CL100K Vision"
+        llama-4: "Llama 4.0"
+        mixtral: "Mixtral 8x7B"
+        solar: "Solar"
+        deepseek-math: "DeepSeek Math"
+        deepseek-code: "DeepSeek Code"
+        qwen-turbo: "Qwen Turbo"
+        claude-3-sonnet: "Claude 3 Sonnet"
+        claude-3-opus: "Claude 3 Opus"
+        claude-3-haiku: "Claude 3 Haiku"
+        gpt-4-turbo-preview: "GPT-4 Turbo"
+      requiresVersion: true
+      modelDisplayLabel: "QanDu Models"
+      supportedCompletionTypes: ["chat", "completion", "edit"]
+      titleConvo: true
+      titleModel: "openai"
+      summarize: false
+      summaryModel: "openai"
+      forcePrompt: false
+      dropParams: ["stop", "frequency_penalty"]
+      disableModelsPage: false
+      disableBuilder: false
+      disableAgents: false
+
+    - name: PollinationAI-Image
+      apiKey: ""
+      baseURL: "https://image.pollinations.ai" 
+      models:
+        default: [
+          "flux", 
+          "sd15",
+          "sd3",
+          "pixart",
+          "kandinsky",
+          "dalle",
+          "anything",
+          "sdxl"
+        ]
+      modelDisplayNames:
+        flux: "Flux (Default)"
+        sd15: "Stable Diffusion 1.5"
+        sd3: "Stable Diffusion 3"
+        pixart: "PixArt-α"
+        kandinsky: "Kandinsky"
+        dalle: "DALL-E"
+        anything: "Anything"
+        sdxl: "Stable Diffusion XL"
+      endpointType: openAI
+      titleConvo: true
+      titleModel: "flux"
+      summarize: false
+      summaryModel: "flux"
+      forcePrompt: false
+      dropParams: ["stop", "frequency_penalty"]
+      modelDisplayLabel: "Image Generator"
+      supportedCompletionTypes: ["chat", "agent", "image"]
+      disableModelsPage: true
+      disableBuilder: false
+      disableAgents: false
+
+  agents:
+    enabled: true
+    artifactsConfig:
+      html:
+        sandboxAttributes: ["allow-scripts", "allow-same-origin", "allow-forms", "allow-modals", "allow-popups", "allow-popups-to-escape-sandbox"]
+        allowedSchemes: ["data", "http", "https"]
+        allowedTags: ["*"]
+        allowedAttributes: ["*"]
+        allowStyles: true
+        allowScripts: true
+      react: 
+        enabled: true
+        sandbox: true
+      mermaid:
+        enabled: true
+    
+  openAI:
+    apiKey: proj-jC9yvrobTicGc5cjpwE7Vsw3-iEPdX_NKABBjxEr-pIHd_6YQgM8tb74vXp1KNCZBmEjHQo86XT3BlbkFJFej3b-FlGaTHU3THS0nQYpnI3VRf8QJxSKgBguscPWFDUhtoe4r-GVSdVeuYk8DPUEdAM2JuwA
+  
+  google:
+    apiKey: AIzaSyCfWiKmGabI7xh6AdwSvVaQ2EEtu-o_NKo
